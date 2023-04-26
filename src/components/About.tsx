@@ -13,8 +13,7 @@ import {
   Image,
   List,
   ListItem,
-  ListIcon,
-  UnorderedList
+  ListIcon
 } from '@chakra-ui/react'
 import {
   FcManager,
@@ -22,11 +21,13 @@ import {
   FcMindMap,
   FcFilingCabinet,
   FcDam,
-  FcCloseUpMode,
-  FcBusinessman
+  FcCloseUpMode
 } from 'react-icons/fc'
+import data from '../data/PortfolioData'
 
 export default function About({color}: {color: string}) {
+  const profile = data.profile
+
   return (
     <Container maxW={'xl'} id="about">
       <Stack
@@ -58,52 +59,18 @@ export default function About({color}: {color: string}) {
           </CardHeader>
           <CardBody>
             <Stack divider={<StackDivider borderWidth={2} />} spacing="4">
-              <Box>
-                <Heading size="xs" textTransform="uppercase">
-                  What I did
-                </Heading>
-                <List spacing={3}>
-                  <ListItem>
-                    <ListIcon as={FcManager} color="green.500" />
-                    Eng Lead Manager
-                  </ListItem>
-                  <ListItem>
-                    <ListIcon as={FcFilingCabinet} color="green.500" />
-                    Backend Principal Engineer
-                  </ListItem>
-                  <ListItem>
-                    <ListIcon as={FcMindMap} color="green.500" />
-                    Machine Learning Engineer
-                  </ListItem>
-                  <ListItem>
-                    <ListIcon as={FcBarChart} color="green.500" />
-                    Data scientist
-                  </ListItem>
-                  <ListItem>
-                    <ListIcon as={FcDam} color="green.500" />
-                    Quality Assurer
-                  </ListItem>
-                </List>
-              </Box>
-              <Box>
-                <Heading size="xs" textTransform="uppercase">
-                  A story behide the roles
-                </Heading>
-                <Text pt="2" fontSize="sm">
-                  It's a little bit of "many" needed for creativity and innovation.
-                </Text>
-              </Box>
-              <Box>
-                <Heading size="xs" textTransform="uppercase">
-                  Next milestone
-                </Heading>
-                <List spacing={3}>
-                  <ListItem>
-                    <ListIcon as={FcCloseUpMode} color="green.500" />
-                    Frontend Engineering
-                  </ListItem>
-                </List>
-              </Box>
+              {profile.abouts.map(about => (
+                <Box>
+                  <Heading size="xs" textTransform="uppercase">
+                    {about.key}
+                  </Heading>
+                  <List spacing={3}>
+                    {about.messages.map(message => (
+                      <ListItem>{message}</ListItem>
+                    ))}
+                  </List>
+                </Box>
+              ))}
             </Stack>
           </CardBody>
         </Card>

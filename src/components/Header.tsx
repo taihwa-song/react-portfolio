@@ -12,17 +12,15 @@ import {
   useColorModeValue
 } from '@chakra-ui/react'
 import {Fade} from 'react-awesome-reveal'
-import {TiArrowBackOutline, TiArrowForwardOutline} from 'react-icons/ti'
-import {GiStairsGoal} from 'react-icons/gi'
+import {TiArrowBackOutline} from 'react-icons/ti'
+import data from '../data/PortfolioData'
 
 export default function Header({color}: {color: string}) {
+  const profile = data.profile
   const go2linkedin = () => {
-    window.open(
-      'https://www.linkedin.com/in/taihwasong/',
-      '_blank',
-      'noreferrer,noopener'
-    )
+    window.open(profile.linkedin, '_blank', 'noreferrer,noopener')
   }
+
   return (
     <Container maxW={'xl'} id="header">
       <Stack
@@ -33,7 +31,7 @@ export default function Header({color}: {color: string}) {
         <Heading fontSize="4xl" fontWeight={600}>
           <Fade delay={500} duration={2000} triggerOnce={true}>
             <Text fontSize={{base: 'lg', sm: 'xl', md: '2xl'}}>
-              Hi, my name is Taihwa <br />
+              Hi, my name is {profile.name} <br />
             </Text>
           </Fade>
           <Fade delay={1000} duration={2000} triggerOnce={true}>
@@ -43,21 +41,11 @@ export default function Header({color}: {color: string}) {
                 <Text color={`${color}.400`}>I'm a</Text>
               </Box>
               <VStack flex="3">
-                <Box>
-                  <Text color={`${color}.300`}>Eng Lead Manager</Text>
-                </Box>
-                <Box>
-                  <Text color={`${color}.300`}>Data Scientist</Text>
-                </Box>
-                <Box>
-                  <Text color={`${color}.300`}>ML Engineer</Text>
-                </Box>
-                <Box>
-                  <Text color={`${color}.300`}>Backend Engineer</Text>
-                </Box>
-                <Box>
-                  <Text color={`${color}.300`}>Quality Assurer</Text>
-                </Box>
+                {profile.pastRoles.map(role => (
+                  <Box>
+                    <Text color={`${color}.300`}>{role}</Text>
+                  </Box>
+                ))}
               </VStack>
             </HStack>
             <HStack pt="20" fontSize={{base: 'lg', sm: 'xl', md: '2xl'}}>
@@ -65,9 +53,11 @@ export default function Header({color}: {color: string}) {
                 <Text color={`${color}.500`}>I'll be a</Text>
               </Box>
               <VStack flex="3">
-                <Box>
-                  <Text color={`${color}.400`}>Frontend Engineer</Text>
-                </Box>
+                {profile.futureRoles.map(role => (
+                  <Box>
+                    <Text color={`${color}.300`}>{role}</Text>
+                  </Box>
+                ))}
               </VStack>
             </HStack>
           </Fade>

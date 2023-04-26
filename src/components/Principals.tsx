@@ -11,8 +11,10 @@ import {
   HStack,
   Divider
 } from '@chakra-ui/react'
+import data from '../data/PortfolioData'
 
 export default function Principals({color}: {color: string}) {
+  const prins = data.principals
   return (
     <Container maxW={'xl'} id="principals">
       <Stack
@@ -32,40 +34,22 @@ export default function Principals({color}: {color: string}) {
 
         <Card>
           <CardHeader>
-            <Heading size="md">3 Principals, I follow</Heading>
-            <Text>
-              When making decisions, whether it being life or busineses, I follow the 3
-              principals to expedite the outcome or to fail and learn in a meaningful way.
-            </Text>
+            <Heading size="md">{prins.header}</Heading>
+            <Text>{prins.desc}</Text>
           </CardHeader>
 
           <CardBody>
             <Stack divider={<StackDivider borderWidth={2} />} spacing="4">
-              <Box>
-                <Heading size="xs" textTransform="uppercase">
-                  Pareto Principle
-                </Heading>
-                <Text pt="2" fontSize="sm">
-                  80% of consequences come from 20% of causes
-                </Text>
-              </Box>
-              <Box>
-                <Heading size="xs" textTransform="uppercase">
-                  PETER THIEL’S BOOK, “ZERO TO ONE”
-                </Heading>
-                <Text pt="2" fontSize="sm">
-                  Today’s “best practices” lead to dead ends; the best paths are new and
-                  untried.
-                </Text>
-              </Box>
-              <Box>
-                <Heading size="xs" textTransform="uppercase">
-                  Steve Jobs
-                </Heading>
-                <Text pt="2" fontSize="sm">
-                  Your time is limited, so don’t waste it living someone else’s life.
-                </Text>
-              </Box>
+              {prins.principals.map(p => (
+                <Box>
+                  <Heading size="xs" textTransform="uppercase">
+                    {p.title}
+                  </Heading>
+                  <Text pt="2" fontSize="sm">
+                    {p.content}
+                  </Text>
+                </Box>
+              ))}
             </Stack>
           </CardBody>
         </Card>
