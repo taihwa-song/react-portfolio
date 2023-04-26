@@ -3,6 +3,9 @@ import {Experience, makeExperience} from './Experience'
 import {Principals, makePrincipal, makePrincipals} from './Principals'
 import {Profile, makeAbout, makeProfile} from './Profile'
 import {Project, makeProject} from './Project'
+import project1logo from '../images/project1.png'
+import project2logo from '../images/project2.gif'
+import project3logo from '../images/project3.png'
 
 export type PortfolioData = {
   experiences: Experience[]
@@ -127,16 +130,21 @@ const data: PortfolioData = {
   ],
   projects: [
     makeProject(
-      'Project Name 1',
-      'description 1',
-      'https://dummyimage.com/600x200/000/fff',
-      'https://www.linkedin.com/feed/'
+      'Machine Learning: Inbound Traffic Optimization (From a personal project to businese product)',
+      'Initiated a project to optimize the inbound traffic to reduce server pressures using a machine-learning solution. The project reduced the server pressure by 40%.',
+      project1logo,
+      'https://www.indexexchange.com/2020/08/06/introduction-machine-learning/'
     ),
     makeProject(
-      'Project Name 2',
-      'description 2',
-      'https://dummyimage.com/600x200/000/fff',
-      'https://www.linkedin.com/feed/'
+      'Portfolio in React',
+      'Building a portfolio website using React with typescript and Chakra UI.',
+      project2logo
+    ),
+    makeProject(
+      'Platform revamp with GoLang',
+      'Rebuilt from the ground up, our new exchange architecture provides increased efficiency and an ability to scale and innovate in new channels and formats, resulting in improved margins for media owners and additional working media dollars for marketers.',
+      project3logo,
+      'https://www.indexexchange.com/2021/11/16/new-platform-increased-efficiency-across-channels/'
     )
   ],
   contact: makeContact(
