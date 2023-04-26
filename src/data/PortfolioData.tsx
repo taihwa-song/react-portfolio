@@ -1,7 +1,11 @@
+import {Contact, makeContact} from './Contact'
 import {Experience, makeExperience} from './Experience'
+import {Project, makeProject} from './Project'
 
 export type PortfolioData = {
   experiences: Experience[]
+  projects: Project[]
+  contact: Contact
 }
 const data: PortfolioData = {
   experiences: [
@@ -17,7 +21,6 @@ const data: PortfolioData = {
         'Skills: AWS, PySpark, Jupyter'
       ]
     ),
-
     makeExperience(
       'Index Exchange',
       'Index Exchange: Principal Software Engineer',
@@ -66,7 +69,27 @@ const data: PortfolioData = {
         'Skills: Perl, Unit Testing, Regression Testing'
       ]
     )
-  ]
+  ],
+  projects: [
+    makeProject(
+      'Project Name 1',
+      'description 1',
+      'https://dummyimage.com/600x200/000/fff',
+      'https://www.linkedin.com/feed/'
+    ),
+    makeProject(
+      'Project Name 2',
+      'description 2',
+      'https://dummyimage.com/600x200/000/fff',
+      'https://www.linkedin.com/feed/'
+    )
+  ],
+  contact: makeContact(
+    "Write your 'contact' section here",
+    'taihwa.song@gmail.com',
+    'https://www.linkedin.com/in/taihwasong/',
+    'https://github.com/taihwa-song'
+  )
 }
 
 export default data
