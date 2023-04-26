@@ -17,7 +17,7 @@ export type PortfolioData = {
 const data: PortfolioData = {
   profile: makeProfile(
     'Taihwa',
-    'According to Pareto Principle, 80% of consequences come from 20% of causes. I desire to attain "many" 20% done to help growing busineses.',
+    'According to the Pareto Principle, 80% of consequences come from 20% of causes. I desire to attain "many" 20% done to help growing businesses.',
     [
       'Eng Lead Manager',
       'Data Scientist',
@@ -69,7 +69,7 @@ const data: PortfolioData = {
         '🧑‍💼️ Leading 2 teams: a team building a MLOps platform and another solving optimization problems.',
         '📢 Cross-team communication: Worked with backend engineers, data team, and non-technical audiences to solve business problems.',
         '📊 Data Science: proving uncertainties using big data',
-        '☁️ AWS (Cloud): automated continous model training using apache airflow',
+        '☁️ AWS (Cloud): automated continuous model training using apache airflow',
         '🛠️ Skills: AWS, Airflow, S3, Docker, PySpark, Jupyter, CI/CD'
       ]
     ),
@@ -81,9 +81,9 @@ const data: PortfolioData = {
       new Date('2021-03-01'),
       new Date('2022-03-01'),
       [
-        '🏗 MLOps platform: building an in-house MLOps platform using MLFlow(model registry), DVC(manging DAG & data version), Feast (feature store), and K8s',
+        '🏗 MLOps platform: building an in-house MLOps platform using MLFlow (model registry), DVC (DAGs & data versioning), Feast (feature store), and K8s',
         '📈 Traffic Optimization: Ad partner side traffic optimization yielding up to 2x higher spends using the MLOps platform above.',
-        '✨ Perl to Go platform revamp: Re-building the entire platfrom from a legacy language, perl, to a cutting edge language, golang.',
+        '✨ Perl to Go platform revamp: Re-building the entire platform from a legacy language, Perl, to a cutting edge language, GoLang.',
         '🛠️ Skills: Golang, K8s, MLFlow, DVC'
       ]
     ),
@@ -95,7 +95,7 @@ const data: PortfolioData = {
       new Date('2019-08-01'),
       new Date('2021-03-01'),
       [
-        '🔬 From a personal project to businese product: Initiated a project to optimize the inbound traffic to reduce server pressures using a machine-learning solution. The project reduced the server pressure by 40% with a marginal revenue loss.',
+        '🔬 From a personal project to a business product: Initiated a project to optimize the inbound traffic to reduce server pressures using a machine-learning solution. The project reduced the server pressure by 40% with a marginal revenue loss.',
         '🚅 Code Optimization: reduced the overall processing time by 65% through profiling.',
         '🛠️ Skills: K8s, Docker, Jupyter, Tensorflow, CatBoast'
       ]
@@ -130,14 +130,14 @@ const data: PortfolioData = {
   ],
   projects: [
     makeProject(
-      'Machine Learning: Inbound Traffic Optimization (From a personal project to businese product)',
+      'Machine Learning: Inbound Traffic Optimization (From a personal project to business product)',
       'Initiated a project to optimize the inbound traffic to reduce server pressures using a machine-learning solution. The project reduced the server pressure by 40%.',
       project1logo,
       'https://www.indexexchange.com/2020/08/06/introduction-machine-learning/'
     ),
     makeProject(
       'Portfolio in React',
-      'Building a portfolio website using React with typescript and Chakra UI.',
+      'Building a portfolio website using React with typescript and Chakra UI. The website is CI/CDed using Netlify pipelines.',
       project2logo
     ),
     makeProject(
