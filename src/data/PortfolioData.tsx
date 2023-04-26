@@ -138,7 +138,8 @@ const data: PortfolioData = {
     makeProject(
       'Portfolio in React',
       'Building a portfolio website using React with typescript and Chakra UI. The website is CI/CDed using Netlify pipelines.',
-      project2logo
+      project2logo,
+      'https://github.com/taihwa-song/react-portfolio'
     ),
     makeProject(
       'Platform revamp with GoLang',
