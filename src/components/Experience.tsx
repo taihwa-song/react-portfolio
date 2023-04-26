@@ -16,8 +16,7 @@ import {
   List,
   ListItem,
   ListIcon,
-  VStack,
-  StackDivider
+  VStack
 } from '@chakra-ui/react'
 import {useState} from 'react'
 import data from '../data/PortfolioData'

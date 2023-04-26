@@ -10,7 +10,6 @@ import {
   Heading,
   Button
 } from '@chakra-ui/react'
-import {useState} from 'react'
 import data from '../data/PortfolioData'
 import {Fade} from 'react-awesome-reveal'
 

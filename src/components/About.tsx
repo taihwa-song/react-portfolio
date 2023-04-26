@@ -12,17 +12,8 @@ import {
   Divider,
   Image,
   List,
-  ListItem,
-  ListIcon
+  ListItem
 } from '@chakra-ui/react'
-import {
-  FcManager,
-  FcBarChart,
-  FcMindMap,
-  FcFilingCabinet,
-  FcDam,
-  FcCloseUpMode
-} from 'react-icons/fc'
 import data from '../data/PortfolioData'
 
 export default function About({color}: {color: string}) {

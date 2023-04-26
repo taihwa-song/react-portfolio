@@ -5,7 +5,6 @@ import {
   HStack,
   Heading,
   Icon,
-  Spacer,
   Stack,
   Text,
   VStack,
