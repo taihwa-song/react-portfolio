@@ -28,12 +28,12 @@ import {
 
 export default function About({color}: {color: string}) {
   return (
-    <Container id="about">
+    <Container maxW={'xl'} id="about">
       <Stack
         textAlign={'center'}
         spacing={{base: 8, md: 14}}
         pb={{base: 20, md: 36}}
-        pt={{base: 36, md: 52}}>
+        pt={{base: 15, md: 30}}>
         <Stack align="center" direction="row" px={4}>
           <HStack mx={4}>
             <Text color={`${color}.400`} fontWeight={800}>
@@ -43,7 +43,6 @@ export default function About({color}: {color: string}) {
           </HStack>
           <Divider orientation="horizontal" />
         </Stack>
-
         <Card>
           <CardHeader>
             <Stack spacing="4" align="center">
@@ -55,81 +54,58 @@ export default function About({color}: {color: string}) {
                 src="https://i.ibb.co/qMNjHhf/square.png"
                 alt="Taihwa Song"
               />
-              <CardBody>
-                <Stack divider={<StackDivider />} spacing="4">
-                  <Box>
-                    <Heading size="xs" textTransform="uppercase">
-                      What I did
-                    </Heading>
-                    <List spacing={3}>
-                      <ListItem>
-                        <ListIcon as={FcManager} color="green.500" />
-                        Eng Lead Manager
-                      </ListItem>
-                      <ListItem>
-                        <ListIcon as={FcBarChart} color="green.500" />
-                        Data scientist
-                      </ListItem>
-                      <ListItem>
-                        <ListIcon as={FcMindMap} color="green.500" />
-                        Machine Learning Engineer
-                      </ListItem>
-                      <ListItem>
-                        <ListIcon as={FcFilingCabinet} color="green.500" />
-                        Backend Engineer
-                      </ListItem>
-                      <ListItem>
-                        <ListIcon as={FcDam} color="green.500" />
-                        Quality Assurer
-                      </ListItem>
-                    </List>
-                  </Box>
-                  <Box>
-                    <Heading size="xs" textTransform="uppercase">
-                      Why so many roles?
-                    </Heading>
-                    <Text pt="2" fontSize="sm">
-                      It's a little bit of "many" needed for creativity and innovation.
-                    </Text>
-                  </Box>
-                  <Box>
-                    <Heading size="xs" textTransform="uppercase">
-                      What's next?
-                    </Heading>
-                    <List spacing={3}>
-                      <ListItem>
-                        <ListIcon as={FcCloseUpMode} color="green.500" />
-                        Frontend Engineering (Technical)
-                      </ListItem>
-                      <ListItem>
-                        <ListIcon as={FcBusinessman} color="green.500" />
-                        Marketing (Non-Technical)
-                      </ListItem>
-                    </List>
-                  </Box>
-                  <Box>
-                    <Heading size="xs" textTransform="uppercase">
-                      Why "frontend engineering"?
-                    </Heading>
-                    <Text pt="2" fontSize="sm">
-                      "Frontend engineering" enables the creation of visually appealing
-                      and user-friendly interfaces for websites and applications. In
-                      addition, they sit closest to the end users.
-                    </Text>
-                  </Box>
-                  <Box>
-                    <Heading size="xs" textTransform="uppercase">
-                      Why "marketing"?
-                    </Heading>
-                    <Text pt="2" fontSize="sm">
-                      One shall not sell good products without good marketing. Marking and
-                      engineering should coexist.
-                    </Text>
-                  </Box>
-                </Stack>
-              </CardBody>
             </Stack>
           </CardHeader>
+          <CardBody>
+            <Stack divider={<StackDivider borderWidth={2} />} spacing="4">
+              <Box>
+                <Heading size="xs" textTransform="uppercase">
+                  What I did
+                </Heading>
+                <List spacing={3}>
+                  <ListItem>
+                    <ListIcon as={FcManager} color="green.500" />
+                    Eng Lead Manager
+                  </ListItem>
+                  <ListItem>
+                    <ListIcon as={FcFilingCabinet} color="green.500" />
+                    Backend Principal Engineer
+                  </ListItem>
+                  <ListItem>
+                    <ListIcon as={FcMindMap} color="green.500" />
+                    Machine Learning Engineer
+                  </ListItem>
+                  <ListItem>
+                    <ListIcon as={FcBarChart} color="green.500" />
+                    Data scientist
+                  </ListItem>
+                  <ListItem>
+                    <ListIcon as={FcDam} color="green.500" />
+                    Quality Assurer
+                  </ListItem>
+                </List>
+              </Box>
+              <Box>
+                <Heading size="xs" textTransform="uppercase">
+                  A story behide the roles
+                </Heading>
+                <Text pt="2" fontSize="sm">
+                  It's a little bit of "many" needed for creativity and innovation.
+                </Text>
+              </Box>
+              <Box>
+                <Heading size="xs" textTransform="uppercase">
+                  Next milestone
+                </Heading>
+                <List spacing={3}>
+                  <ListItem>
+                    <ListIcon as={FcCloseUpMode} color="green.500" />
+                    Frontend Engineering
+                  </ListItem>
+                </List>
+              </Box>
+            </Stack>
+          </CardBody>
         </Card>
       </Stack>
     </Container>

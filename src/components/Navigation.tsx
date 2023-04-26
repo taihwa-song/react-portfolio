@@ -29,6 +29,9 @@ export default function Navigation({color}: {color: string}) {
             About
           </Button>
           <Button variant="ghost" fontSize="sm">
+            Principals
+          </Button>
+          <Button variant="ghost" fontSize="sm">
             Experience
           </Button>
           <Button variant="ghost" fontSize="sm">

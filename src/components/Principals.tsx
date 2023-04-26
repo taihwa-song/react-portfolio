@@ -14,12 +14,12 @@ import {
 
 export default function Principals({color}: {color: string}) {
   return (
-    <Container id="about">
+    <Container maxW={'xl'} id="principals">
       <Stack
         textAlign={'center'}
         spacing={{base: 8, md: 14}}
         pb={{base: 20, md: 36}}
-        pt={{base: 36, md: 52}}>
+        pt={{base: 15, md: 30}}>
         <Stack align="center" direction="row" px={4}>
           <HStack mx={4}>
             <Text color={`${color}.400`} fontWeight={800}>
@@ -32,15 +32,15 @@ export default function Principals({color}: {color: string}) {
 
         <Card>
           <CardHeader>
-            <Heading size="md">Principals, I believe in</Heading>
+            <Heading size="md">3 Principals, I follow</Heading>
             <Text>
-              When making decisions, whether it being life or busineses, I follow these
+              When making decisions, whether it being life or busineses, I follow the 3
               principals to expedite the outcome or to fail and learn in a meaningful way.
             </Text>
           </CardHeader>
 
           <CardBody>
-            <Stack divider={<StackDivider />} spacing="4">
+            <Stack divider={<StackDivider borderWidth={2} />} spacing="4">
               <Box>
                 <Heading size="xs" textTransform="uppercase">
                   Pareto Principle
