@@ -12,88 +12,6 @@ export type PortfolioData = {
   principals: Principals
 }
 const data: PortfolioData = {
-  experiences: [
-    makeExperience(
-      'Index Exchange',
-      'Index Exchange: Engineering Lead Manager',
-      'Engineering Lead Manager',
-      'https://www.indexexchange.com/tachyon/2021/11/cropped-Index_LogoSuite-10.png',
-      new Date('2022-03-01'),
-      new Date('2023-02-01'),
-      [
-        'Leading an ML & Optimization team increasing the efficiency of platform dynamics together with teams abroad',
-        'Skills: AWS, PySpark, Jupyter'
-      ]
-    ),
-    makeExperience(
-      'Index Exchange',
-      'Index Exchange: Principal Software Engineer',
-      'Data Scientist',
-      'https://www.indexexchange.com/tachyon/2021/11/cropped-Index_LogoSuite-10.png',
-      new Date('2021-03-01'),
-      new Date('2022-03-01'),
-      [
-        'Developed a request optimization solution via a machine learning solution with a group of five engineers',
-        'Introduced and instantiated components of MLOps into the company which allowed management of a training pipeline via DAG.',
-        'Skills: GoLang, Python, AWS, PySpark, Jupyter'
-      ]
-    ),
-    makeExperience(
-      'Index Exchange',
-      'Index Exchange: MLOps',
-      'MLOps',
-      'https://www.indexexchange.com/tachyon/2021/11/cropped-Index_LogoSuite-10.png',
-      new Date('2019-07-01'),
-      new Date('2021-03-01'),
-      ['point 1', 'point 2']
-    ),
-    makeExperience(
-      'Index Exchange',
-      'Index Exchange: Backend Engineer',
-      'Backend Engineer',
-      'https://www.indexexchange.com/tachyon/2021/11/cropped-Index_LogoSuite-10.png',
-      new Date('2016-01-01'),
-      new Date('2019-07-01'),
-      [
-        'Building an ad exchange system handling 300 billion requests every day',
-        'Building CI/CD pipelines for development and deployment automations',
-        'Skills: GoLang'
-      ]
-    ),
-    makeExperience(
-      'Index Exchange',
-      'Casale Media: Testing',
-      'Software Developer In Test',
-      'https://www.indexexchange.com/tachyon/2021/11/cropped-Index_LogoSuite-10.png',
-      new Date('2014-11-01'),
-      new Date('2016-01-01'),
-      [
-        'Planning and designing test strategies',
-        'Executing tests and analyzing results',
-        'Skills: Perl, Unit Testing, Regression Testing'
-      ]
-    )
-  ],
-  projects: [
-    makeProject(
-      'Project Name 1',
-      'description 1',
-      'https://dummyimage.com/600x200/000/fff',
-      'https://www.linkedin.com/feed/'
-    ),
-    makeProject(
-      'Project Name 2',
-      'description 2',
-      'https://dummyimage.com/600x200/000/fff',
-      'https://www.linkedin.com/feed/'
-    )
-  ],
-  contact: makeContact(
-    "Write your 'contact' section here",
-    'taihwa.song@gmail.com',
-    'https://www.linkedin.com/in/taihwasong/',
-    'https://github.com/taihwa-song'
-  ),
   profile: makeProfile(
     'Taihwa',
     'According to Pareto Principle, 80% of consequences come from 20% of causes. I desire to attain "many" 20% done to help growing busineses.',
@@ -123,7 +41,7 @@ const data: PortfolioData = {
   ),
   principals: makePrincipals(
     '3 Principals, I follow',
-    'When making decisions, whether it being life or busineses, I follow the 3 principals to expedite the outcome or to fail and learn in a meaningful way.',
+    'To Expedite outcomes or to fail-and-learn meaningfully.',
     [
       makePrincipal('PARETO PRINCIPLE', '80% of consequences come from 20% of causes'),
       makePrincipal(
@@ -131,10 +49,101 @@ const data: PortfolioData = {
         'Today’s “best practices” lead to dead ends; the best paths are new and untried.'
       ),
       makePrincipal(
-        'STEVE JOBS',
-        'Your time is limited, so don’t waste it living someone else’s life.'
+        'Taihwa Song',
+        "Collecting the dots. Then connect them; it'll become a line. That makes you YOU"
       )
     ]
+  ),
+  experiences: [
+    makeExperience(
+      'Index Exchange',
+      'Index Exchange: Engineering Lead Manager',
+      'Engineering Lead Manager',
+      'https://www.indexexchange.com/tachyon/2021/11/cropped-Index_LogoSuite-10.png',
+      new Date('2022-03-01'),
+      new Date('2023-02-01'),
+      [
+        '🧑‍💼️ Leading 2 teams: a team building a MLOps platform and another solving optimization problems.',
+        '📢 Cross-team communication: Worked with backend engineers, data team, and non-technical audiences to solve business problems.',
+        '📊 Data Science: proving uncertainties using big data',
+        '☁️ AWS (Cloud): automated continous model training using apache airflow',
+        '🛠️ Skills: AWS, Airflow, S3, Docker, PySpark, Jupyter, CI/CD'
+      ]
+    ),
+    makeExperience(
+      'Index Exchange',
+      'Index Exchange: Principal  Engineer',
+      'Principal Software Engineer & Data Scientist',
+      'https://www.indexexchange.com/tachyon/2021/11/cropped-Index_LogoSuite-10.png',
+      new Date('2021-03-01'),
+      new Date('2022-03-01'),
+      [
+        '🏗 MLOps platform: building an in-house MLOps platform using MLFlow(model registry), DVC(manging DAG & data version), Feast (feature store), and K8s',
+        '📈 Traffic Optimization: Ad partner side traffic optimization yielding up to 2x higher spends using the MLOps platform above.',
+        '✨ Perl to Go platform revamp: Re-building the entire platfrom from a legacy language, perl, to a cutting edge language, golang.',
+        '🛠️ Skills: Golang, K8s, MLFlow, DVC'
+      ]
+    ),
+    makeExperience(
+      'Index Exchange',
+      'Index Exchange: Engineer IV - Backend & ML',
+      'MLOps',
+      'https://www.indexexchange.com/tachyon/2021/11/cropped-Index_LogoSuite-10.png',
+      new Date('2019-08-01'),
+      new Date('2021-03-01'),
+      [
+        '🔬 From a personal project to businese product: Initiated a project to optimize the inbound traffic to reduce server pressures using a machine-learning solution. The project reduced the server pressure by 40% with a marginal revenue loss.',
+        '🚅 Code Optimization: reduced the overall processing time by 65% through profiling.',
+        '🛠️ Skills: K8s, Docker, Jupyter, Tensorflow, CatBoast'
+      ]
+    ),
+    makeExperience(
+      'Index Exchange',
+      'Index Exchange: Engineer II & III - Backend ',
+      'Backend Engineer',
+      'https://www.indexexchange.com/tachyon/2021/11/cropped-Index_LogoSuite-10.png',
+      new Date('2016-01-01'),
+      new Date('2019-08-01'),
+      [
+        '🌐 Globalization project: multi language (UTF-8) and multi currency support',
+        '🧑‍🏭️ Low latency platform development: Building an ad exchange system handling 300 billion requests every day',
+        '🔄 CI/CD: Building CI/CD pipelines for development and deployment automations',
+        '🛠️ Skills: GoLang, Gitlab CI/CD, K8s, Docker, profiling'
+      ]
+    ),
+    makeExperience(
+      'Casale Media',
+      'Casale Media: Testing',
+      'Software Developer In Test',
+      'https://seeklogo.com/images/C/casale-media-logo-D707A8CE51-seeklogo.com.png',
+      new Date('2014-11-01'),
+      new Date('2016-01-01'),
+      [
+        '🎨 Planning and designing test strategies',
+        '🥼 Test Analysis: Executing tests and analyzing results',
+        '🛠️ Skills: Perl, SVN, Unit Testing, Regression Testing'
+      ]
+    )
+  ],
+  projects: [
+    makeProject(
+      'Project Name 1',
+      'description 1',
+      'https://dummyimage.com/600x200/000/fff',
+      'https://www.linkedin.com/feed/'
+    ),
+    makeProject(
+      'Project Name 2',
+      'description 2',
+      'https://dummyimage.com/600x200/000/fff',
+      'https://www.linkedin.com/feed/'
+    )
+  ],
+  contact: makeContact(
+    "Write your 'contact' section here",
+    'taihwa.song@gmail.com',
+    'https://www.linkedin.com/in/taihwasong/',
+    'https://github.com/taihwa-song'
   )
 }
 
