@@ -12,7 +12,7 @@ import {
   useColorModeValue
 } from '@chakra-ui/react'
 import {Fade} from 'react-awesome-reveal'
-import {TiArrowBackOutline} from 'react-icons/ti'
+import {TiArrowBackOutline, TiArrowForwardOutline} from 'react-icons/ti'
 import {GiStairsGoal} from 'react-icons/gi'
 
 export default function Header({color}: {color: string}) {
@@ -32,13 +32,13 @@ export default function Header({color}: {color: string}) {
         pt={{base: 36, md: 52}}>
         <Heading fontSize="4xl" fontWeight={600}>
           <Fade delay={500} duration={2000} triggerOnce={true}>
-            <Text>
+            <Text fontSize={{base: 'lg', sm: 'xl', md: '2xl'}}>
               Hi, my name is Taihwa <br />
             </Text>
           </Fade>
           <Fade delay={1000} duration={2000} triggerOnce={true}>
             {' '}
-            <HStack pt="20">
+            <HStack pt="20" fontSize={{base: 'lg', sm: 'xl', md: '2xl'}}>
               <Box flex="1">
                 <Text color={`${color}.400`}>I'm a</Text>
               </Box>
@@ -56,32 +56,17 @@ export default function Header({color}: {color: string}) {
                   <Text color={`${color}.300`}>Backend Engineer</Text>
                 </Box>
                 <Box>
-                  <Text color={`${color}.200`} textDecor="line-through">
-                    Frontend Engineer
-                  </Text>
-                  <Stack align={'center'} alignSelf={'center'} position={'relative'}>
-                    <Icon
-                      as={TiArrowBackOutline}
-                      color={useColorModeValue('gray.800', 'gray.300')}
-                      fontSize="5xl"
-                      position={'absolute'}
-                      right={-65}
-                      top={-12}
-                      transform={'rotate(-20deg)'}
-                    />
-                    <Text
-                      fontSize={'lg'}
-                      fontFamily={'Caveat'}
-                      position={'absolute'}
-                      right={'-130px'}
-                      top={'-30px'}
-                      transform={'rotate(-60deg)'}>
-                      New Goal <Icon as={GiStairsGoal}></Icon>
-                    </Text>
-                  </Stack>
-                </Box>
-                <Box>
                   <Text color={`${color}.300`}>Quality Assurer</Text>
+                </Box>
+              </VStack>
+            </HStack>
+            <HStack pt="20" fontSize={{base: 'lg', sm: 'xl', md: '2xl'}}>
+              <Box flex="1">
+                <Text color={`${color}.500`}>I'll be a</Text>
+              </Box>
+              <VStack flex="3">
+                <Box>
+                  <Text color={`${color}.400`}>Frontend Engineer</Text>
                 </Box>
               </VStack>
             </HStack>

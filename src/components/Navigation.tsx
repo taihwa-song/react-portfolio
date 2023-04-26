@@ -5,9 +5,17 @@ import {
   Box,
   useColorModeValue,
   Stack,
-  HStack
+  HStack,
+  useMediaQuery,
+  Container,
+  IconButton,
+  useDisclosure,
+  Drawer,
+  DrawerOverlay,
+  DrawerContent,
+  DrawerBody
 } from '@chakra-ui/react'
-import {MoonIcon, SunIcon} from '@chakra-ui/icons'
+import {HamburgerIcon, MoonIcon, SunIcon} from '@chakra-ui/icons'
 
 export default function Navigation({color}: {color: string}) {
   const {colorMode, toggleColorMode} = useColorMode()
@@ -35,6 +43,8 @@ export default function Navigation({color}: {color: string}) {
     const contactSection = document.querySelector('#contact')
     if (contactSection) contactSection.scrollIntoView({behavior: 'smooth'})
   }
+  const [isLargerThanMD] = useMediaQuery('(min-width: 48em)')
+  const {isOpen, onOpen, onClose} = useDisclosure()
   return (
     <Flex
       bg={useColorModeValue('gray.100', 'gray.900')}
@@ -49,28 +59,63 @@ export default function Navigation({color}: {color: string}) {
       </HStack>
 
       <Flex alignItems={'center'}>
-        <Stack direction={'row'} spacing={0}>
-          <Button variant="ghost" fontSize="sm" onClick={scrollToAbout}>
-            About
-          </Button>
-          <Button variant="ghost" fontSize="sm" onClick={scrollToPrincipals}>
-            Principals
-          </Button>
-          <Button variant="ghost" fontSize="sm" onClick={scrollToExperience}>
-            Experience
-          </Button>
-          <Button variant="ghost" fontSize="sm" onClick={scrollToProjects}>
-            Projects
-          </Button>
-          <Button variant="ghost" fontSize="sm" onClick={scrollToContact}>
-            Contact
-          </Button>
-        </Stack>
+        {isLargerThanMD ? (
+          <Container>
+            <Stack direction={'row'} spacing={0}>
+              <Button variant="ghost" fontSize="sm" onClick={scrollToAbout}>
+                About
+              </Button>
+              <Button variant="ghost" fontSize="sm" onClick={scrollToPrincipals}>
+                Principals
+              </Button>
+              <Button variant="ghost" fontSize="sm" onClick={scrollToExperience}>
+                Experience
+              </Button>
+              <Button variant="ghost" fontSize="sm" onClick={scrollToProjects}>
+                Projects
+              </Button>
+              <Button variant="ghost" fontSize="sm" onClick={scrollToContact}>
+                Contact
+              </Button>
+            </Stack>
+          </Container>
+        ) : (
+          <></>
+        )}
         <Box>
           <Button onClick={toggleColorMode}>
             {colorMode === 'light' ? <SunIcon /> : <MoonIcon />}
           </Button>
         </Box>
+        {isLargerThanMD ? (
+          <></>
+        ) : (
+          <Container>
+            <Button as={IconButton} icon={<HamburgerIcon />} onClick={onOpen}></Button>
+            <Drawer placement="top" onClose={onClose} isOpen={isOpen}>
+              <DrawerOverlay />
+              <DrawerContent>
+                <DrawerBody>
+                  <Button variant="ghost" onClick={scrollToAbout}>
+                    About
+                  </Button>
+                  <Button variant="ghost" onClick={scrollToPrincipals}>
+                    Principals
+                  </Button>
+                  <Button variant="ghost" onClick={scrollToExperience}>
+                    Experience
+                  </Button>
+                  <Button variant="ghost" onClick={scrollToProjects}>
+                    Projects
+                  </Button>
+                  <Button variant="ghost" onClick={scrollToContact}>
+                    Contact
+                  </Button>
+                </DrawerBody>
+              </DrawerContent>
+            </Drawer>
+          </Container>
+        )}
       </Flex>
     </Flex>
   )
