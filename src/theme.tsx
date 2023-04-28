@@ -5,7 +5,11 @@ const config: ThemeConfig = {
   useSystemColorMode: false
 }
 const theme = extendTheme({
-  config
+  config,
+  fonts: {
+    heading: `'Open Sans', sans-serif`,
+    body: `'Raleway', sans-serif`
+  }
 })
 
 export default theme

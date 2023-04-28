@@ -63,7 +63,11 @@ export default function Header({color}: {color: string}) {
         </Heading>
         <Fade delay={1500} duration={2000} triggerOnce={true}>
           {' '}
-          <Text color={'gray.600'} fontSize={'xl'} px={4}>
+          <Text
+            color={'gray.400'}
+            fontSize={'xl'}
+            px={4}
+            fontFamily={'Apple Chancery, cursive'}>
             According to Pareto Principle,{' '}
             <b>80% of consequences come from 20% of causes.</b> I desire to attain{' '}
             <b>"many" 20% done</b> to help growing busineses.
