@@ -39,7 +39,7 @@ const data: PortfolioData = {
       makeAbout('A STORY BEHIDE THE ROLES', [
         'It\'s a little bit of "many" needed for creativity and innovation.'
       ]),
-      makeAbout('NEXT MILESTONE', ['🎨 Frontend Engineering'])
+      makeAbout('NEXT MILESTONE', ['🎨 Fullstack/Frontend Engineering'])
     ]
   ),
   principals: makePrincipals(
