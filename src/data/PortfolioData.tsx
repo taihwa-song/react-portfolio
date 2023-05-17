@@ -25,7 +25,7 @@ const data: PortfolioData = {
       'Backend Engineer',
       'Quality Assurer'
     ],
-    ['Frontend Engineer'],
+    ['Fullstack/Frontend Engineer'],
     'https://www.linkedin.com/in/taihwasong/',
     'https://i.ibb.co/qMNjHhf/square.png',
     [
