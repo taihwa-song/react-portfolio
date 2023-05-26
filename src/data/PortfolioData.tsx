@@ -6,7 +6,7 @@ import {Project, makeProject} from './Project'
 import project1logo from '../images/project1.png'
 import project2logo from '../images/project2.gif'
 import project3logo from '../images/project3.png'
-import project4logo from '../images/project4.png'
+import project4logo from '../images/project4.jpg'
 
 export type PortfolioData = {
   experiences: Experience[]
