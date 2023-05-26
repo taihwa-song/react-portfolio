@@ -40,7 +40,7 @@ const data: PortfolioData = {
       makeAbout('A STORY BEHIDE THE ROLES', [
         'It\'s a little bit of "many" needed for creativity and innovation.'
       ]),
-      makeAbout('NEXT MILESTONE', ['🎨 Fullstack/Frontend Engineering'])
+      makeAbout('NEXT MILESTONE', ['🎨 Frontend / 🧠 ML Engineering'])
     ]
   ),
   principals: makePrincipals(
@@ -138,7 +138,7 @@ const data: PortfolioData = {
     ),
     makeProject(
       'Insta GPT',
-      'Created an instagram influence that makes daily posts using chatGPT and Facebook API. Currently 4 InstaGPT influencers are available and one of them made hundreds of followers within a month.',
+      'Created an instagram influencer making daily posts using chatGPT and Facebook API. Currently 4 InstaGPT influencers are available and one of them made hundreds of followers within a month.',
       project4logo,
       'https://www.instagram.com/midnight_inspiration_foryou/'
     ),
@@ -156,7 +156,7 @@ const data: PortfolioData = {
     )
   ],
   contact: makeContact(
-    "Write your 'contact' section here",
+    '',
     'taihwa.song@gmail.com',
     'https://www.linkedin.com/in/taihwasong/',
     'https://github.com/taihwa-song'
