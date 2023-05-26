@@ -6,6 +6,7 @@ import {Project, makeProject} from './Project'
 import project1logo from '../images/project1.png'
 import project2logo from '../images/project2.gif'
 import project3logo from '../images/project3.png'
+import project4logo from '../images/project4.png'
 
 export type PortfolioData = {
   experiences: Experience[]
@@ -25,7 +26,7 @@ const data: PortfolioData = {
       'Backend Engineer',
       'Quality Assurer'
     ],
-    ['Fullstack/Frontend Engineer'],
+    ['Frontend / ML Engineer'],
     'https://www.linkedin.com/in/taihwasong/',
     'https://i.ibb.co/qMNjHhf/square.png',
     [
@@ -134,6 +135,12 @@ const data: PortfolioData = {
       'Initiated a project to optimize the inbound traffic to reduce server pressures using a machine-learning solution. The project reduced the server pressure by 40%.',
       project1logo,
       'https://www.indexexchange.com/2020/08/06/introduction-machine-learning/'
+    ),
+    makeProject(
+      'Insta GPT',
+      'Created an instagram influence that makes daily posts using chatGPT and Facebook API. Currently 4 InstaGPT influencers are available and one of them made hundreds of followers within a month.',
+      project4logo,
+      'https://www.instagram.com/midnight_inspiration_foryou/'
     ),
     makeProject(
       'Portfolio in React',
