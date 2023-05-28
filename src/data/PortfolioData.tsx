@@ -26,7 +26,7 @@ const data: PortfolioData = {
       'Backend Engineer',
       'Quality Assurer'
     ],
-    ['Frontend / ML Engineer'],
+    ['ML Engineer'],
     'https://www.linkedin.com/in/taihwasong/',
     'https://i.ibb.co/qMNjHhf/square.png',
     [
@@ -40,7 +40,7 @@ const data: PortfolioData = {
       makeAbout('A STORY BEHIDE THE ROLES', [
         'It\'s a little bit of "many" needed for creativity and innovation.'
       ]),
-      makeAbout('NEXT MILESTONE', ['🎨 Frontend / 🧠 ML Engineering'])
+      makeAbout('NEXT MILESTONE', ['🧠 ML Engineering'])
     ]
   ),
   principals: makePrincipals(
